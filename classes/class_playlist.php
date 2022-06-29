@@ -17,4 +17,9 @@ class Playlist {
         $this->songs[] = $song;
         
     }
+    
+    public function exportPlaylist(){
+        //export Playlist
+    }
+
 }
