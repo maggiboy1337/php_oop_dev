@@ -7,4 +7,10 @@ $octopusSong = new Song();
 $octopusSong->songId = 1;
 $octopusSong->title = "This is my Song";
 
-var_dump($octopusSong);
+
+$playlist = new Playlist();
+$playlist->name = "Rock";
+$playlist->addSong($octopusSong->title);
+
+
+var_dump($playlist->songs); 
