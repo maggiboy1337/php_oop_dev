@@ -15,11 +15,19 @@ class Playlist {
     public function addSong($song){
 
         $this->songs[] = $song;
-        
+
+    }
+
+    public function removeSong($song){
+
+        //Remove song from playlist
+
     }
     
+
     public function exportPlaylist(){
         //export Playlist
     }
 
 }
+
