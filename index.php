@@ -1,11 +1,7 @@
 <?php
 
-class Song {
+include_once "./classes/class_playlist.php";
 
-    public $songId;
-    public $title;
-
-}
 
 $octopusSong = new Song();
 $octopusSong->songId = 1;
