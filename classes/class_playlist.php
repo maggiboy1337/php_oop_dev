@@ -6,3 +6,15 @@ class Song {
     public $title;
 
 }
+
+class Playlist {
+
+    public $name;
+    public $songs = [];
+
+    public function addSong($song){
+
+        $this->songs[] = $song;
+        
+    }
+}
