@@ -1,19 +1,26 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        require_once './classes/class_premiumCheckingAccount.php';
 
-include_once "./classes/class_playlist.php";
+        $checkingAccount = new CheckingPremiumAccount();
 
-$playlist = new Playlist();
-$playlist->name = "Rock";
+        $checkingAccount->deposit(20);
+
+        $checkingAccount->withdraw(10);
+
+        $checkingAccount->transfer(100);
+
+        echo $checkingAccount->minimumBalance;
 
 
-$octopusSong = new Song();
-$octopusSong->songId = 1;
-$octopusSong->title = "This is my Song";
-$playlist->addSong($octopusSong);
-
-$new_song = new Song();
-$new_song->songId = 2;
-$new_song->title = "Another Song";
-$playlist->addSong($new_song);
-
-var_dump($playlist->songs); 
+    ?>
+</body>
+</html>
