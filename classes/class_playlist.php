@@ -1,33 +1,15 @@
 <?php
 
-class Song {
+class Comment
+{
+    public $text;
+    public $userId;
 
-    public $songId;
-    public $title;
-
+    public function  __construct($text,$userId)
+    {
+        $this->text = $text;
+        $this->id = $userId;
+    }
 }
 
-class Playlist {
-
-    public $name;
-    public $songs = [];
-
-    public function addSong($song){
-
-        $this->songs[] = $song;
-
-    }
-
-    public function removeSong($song){
-
-        //Remove song from playlist
-
-    }
-
-    public function exportPlaylist(){
-        //export Playlist
-        //very nice
-    }
-
-}
-
+?>
