@@ -8,19 +8,13 @@
 </head>
 <body>
     <?php
-        require_once './classes/class_premiumCheckingAccount.php';
-
-        $checkingAccount = new CheckingPremiumAccount();
-
-        $checkingAccount->deposit(20);
-
-        $checkingAccount->withdraw(10);
-
-        $checkingAccount->transfer(100);
-
-        echo $checkingAccount->minimumBalance;
-
+        require_once './classes/class_bid.php';
+        
+        $bid = new Bid();
+        $bid->setBidAmount(6);
 
     ?>
+
+    <p>The bid amount is <?php echo  $bid->getBidAmount(); ?></p>
 </body>
 </html>
